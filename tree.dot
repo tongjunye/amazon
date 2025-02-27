@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="actual_price <= 7994.5\nsquared_error = 0.1\nsamples = 1172\nvalue = 4.097", fillcolor="#f6d4bc"] ;
+1 [label="discount_percentage <= 70.5\nsquared_error = 0.112\nsamples = 977\nvalue = 4.081", fillcolor="#f7d7c0"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="discount_percentage <= 5.5\nsquared_error = 0.107\nsamples = 821\nvalue = 4.102", fillcolor="#f6d4bb"] ;
+1 -> 2 ;
+3 [label="squared_error = 0.037\nsamples = 51\nvalue = 4.243", fillcolor="#f2c09c"] ;
+2 -> 3 ;
+4 [label="squared_error = 0.11\nsamples = 770\nvalue = 4.092", fillcolor="#f6d5bd"] ;
+2 -> 4 ;
+5 [label="discounted_price <= 874.0\nsquared_error = 0.121\nsamples = 156\nvalue = 3.971", fillcolor="#fae6d8"] ;
+1 -> 5 ;
+6 [label="squared_error = 0.118\nsamples = 129\nvalue = 4.009", fillcolor="#f9e1cf"] ;
+5 -> 6 ;
+7 [label="squared_error = 0.095\nsamples = 27\nvalue = 3.789", fillcolor="#ffffff"] ;
+5 -> 7 ;
+8 [label="actual_price <= 21994.5\nsquared_error = 0.033\nsamples = 195\nvalue = 4.179", fillcolor="#f4c9aa"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="discounted_price <= 6795.0\nsquared_error = 0.037\nsamples = 131\nvalue = 4.15", fillcolor="#f5cdb1"] ;
+8 -> 9 ;
+10 [label="squared_error = 0.039\nsamples = 58\nvalue = 4.205", fillcolor="#f3c5a5"] ;
+9 -> 10 ;
+11 [label="squared_error = 0.031\nsamples = 73\nvalue = 4.105", fillcolor="#f6d3ba"] ;
+9 -> 11 ;
+12 [label="discounted_price <= 69994.5\nsquared_error = 0.021\nsamples = 64\nvalue = 4.239", fillcolor="#f2c19d"] ;
+8 -> 12 ;
+13 [label="squared_error = 0.018\nsamples = 63\nvalue = 4.232", fillcolor="#f2c29f"] ;
+12 -> 13 ;
+14 [label="squared_error = 0.0\nsamples = 1\nvalue = 4.7", fillcolor="#e58139"] ;
+12 -> 14 ;
+}
