@@ -39,7 +39,7 @@ data.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -244,7 +244,7 @@ data.isnull().sum()
 
 # 二、EDA 描述性统计
 
-### 1.EDA：对数值列进行描述性统计分析，罗列出最大值，最小值，标准差; 25%, 50%, 75%置信区间
+# EDA：对数值列进行描述性统计分析，罗列出最大值，最小值，标准差; 25%, 50%, 75%置信区间
 
 
 ```python
@@ -263,7 +263,7 @@ data[['discounted_price','actual_price','discount_percentage']].describe()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -332,7 +332,7 @@ data[['discounted_price','actual_price','discount_percentage']].describe()
 
 
 
-### 2.显示不同级别的评分共出现了多少次
+# 显示不同级别的评分共出现了多少次
 
 
 ```python
@@ -372,7 +372,7 @@ data['rating'].value_counts()
 
 
 
-### 3.按照类别分组，并且给予平均值降序排列
+# 按照类别分组，并且给予平均值降序排列
 
 
 ```python
@@ -398,7 +398,7 @@ data.groupby('category')['rating'].mean().sort_values(ascending=False)
 
 
 
-### 4. EDA: 对数值列进行初步可视化
+# EDA: 对数值列进行初步可视化
 
 
 ```python
@@ -418,11 +418,12 @@ data.hist(bins=50, figsize=(20, 15))
 
 
 
-​    
+    
 ![png](output_17_1.png)
-​    
+    
 
-### 5.EDA: 对4列数据进行相关性分析
+
+# EDA: 对4列数据进行相关性分析
 
 
 ```python
@@ -454,11 +455,12 @@ scatter_matrix(data[attributes], figsize=(12, 8))
 
 
 
-​    
+    
 ![png](output_19_1.png)
-​    
+    
 
-### 着重关注最后一行的用户最终评分，可以看到评分与 打折后的价格、原价格、打折力度有着明显的线性相关趋势。尤其关注打折力度和最终评分的关系，之后可以考虑用线性回归模型进行建模分析，下面我们查看他们之间的皮尔逊相关系数
+
+#  我们着重关注最后一行的用户最终评分，可以看到评分与 打折后的价格、原价格、打折力度有着明显的线性相关趋势。尤其关注打折力度和最终评分的关系，之后可以考虑用线性回归模型进行建模分析，下面我们查看他们之间的皮尔逊相关系数
 
 
 ```python
@@ -482,7 +484,7 @@ corr_matrix
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -540,13 +542,14 @@ plt.show()
 ```
 
 
-​    
+    
 ![png](output_23_0.png)
-​    
+    
 
-### 可以看到两者之间的皮尔逊系数为-0.13，打折力度增加用户评分反而可能下降，这一现象可能符合买家的某些心理，例如：最贵的一定是最好的
 
-### 6. EDA: 深入探索，这次区分商品类别
+# 可以看到两者之间的皮尔逊系数为-0.13，打折力度增加用户评分反而可能下降，这一现象可能符合买家的某些心理，例如：最贵的一定是最好的
+
+# EDA: 深入探索，这次区分商品类别
 
 
 ```python
@@ -560,11 +563,12 @@ plt.show()
 ```
 
 
-​    
+    
 ![png](output_26_0.png)
-​    
+    
 
-### 7. EDA:使用wordcloud统计用户评论中的高频词汇
+
+# EDA:使用wordcloud统计用户评论中的高频词汇
 
 
 ```python
@@ -583,9 +587,9 @@ plt.show()
 ```
 
 
-​    
+    
 ![png](output_28_0.png)
-​    
+    
 
 
 # 三、使用决策树模型建模
@@ -661,7 +665,7 @@ data.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -847,7 +851,7 @@ X_train
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1016,9 +1020,9 @@ Image(filename='tree.png')
 
 
 
-​    
+    
 ![png](output_42_0.png)
-​    
+    
 
 
 
